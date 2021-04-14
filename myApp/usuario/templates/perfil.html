@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-section">
+    {% csrf_token %}
+    <input type="hidden" id="recomendacionesUrl" value="{% url 'recomendaciones-estudiante' usuario.username %}">
+    <div class="media">
+        <img class="rounded-circle account-img" style="width:100px"
+            src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg">
+        <div class="media-body">
+            <h2 class="account-heading">Usuario</h2>
+        </div>
+    </div>
+
+    <!-- FORM HERE -->
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-light">Mis Formularios</li>
+
+
+        <div class="card-columns">
+
+            <div class="card" style="width: 13rem;">
+                <img class="card-img-top" style="width:auto"
+                    src="https://lh3.googleusercontent.com/ve4q0bAnK1VBAxGvsLMjQSXEN4SIGxJhKxfomJK32iH8iKHpcfwr0AUL52eQ1t2cMZnk=s180-rw"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">nombre encuensta</h5>
+                    <p class="card-text">lalala</p>
+
+                </div>
+            </div>
+
+
+            {% endblock content %}
